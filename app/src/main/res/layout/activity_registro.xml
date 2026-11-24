@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <TextView
+            android:id="@+id/txtTituloRegistro"
+            style="@style/Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/registro_titulo" />
+
+        <TextView
+            android:id="@+id/txtSubtituloRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:text="@string/registro_subtitulo"
+            android:textColor="@color/texto_suave"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/edtNombreRegistro"
+            style="@style/Campo"
+            android:hint="@string/hint_nombre"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtCorreoRegistro"
+            style="@style/Campo"
+            android:hint="@string/hint_correo"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/edtClaveRegistro"
+            style="@style/Campo"
+            android:hint="@string/hint_clave"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/edtRepetirClaveRegistro"
+            style="@style/Campo"
+            android:hint="@string/hint_repetir_clave"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/registro_pregunta_genero"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgGeneroRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbRockRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/genero_rock" />
+
+            <RadioButton
+                android:id="@+id/rbPopRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/genero_pop" />
+
+            <RadioButton
+                android:id="@+id/rbUrbanoRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/genero_urbano" />
+
+            <RadioButton
+                android:id="@+id/rbOtroRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/genero_otro" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/chkTerminosRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/registro_terminos" />
+
+        <Button
+            android:id="@+id/btnCrearCuentaRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="btnCrearCuentaOnClick"
+            android:text="@string/registro_boton" />
+
+        <TextView
+            android:id="@+id/txtIrLoginRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:onClick="txtIrLoginOnClick"
+            android:text="@string/registro_ir_login"
+            android:textColor="@color/primario" />
+
+    </LinearLayout>
+</ScrollView>
